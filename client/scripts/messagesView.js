@@ -12,10 +12,18 @@ var MessagesView = {
 
   render: function() {
     // TODO: Render _all_ the messages.
+    // will user renderMessages as  helper to append messages
+    //run a loop send each one to MessageView.render(msg)
+    // take in value from container renderMssage will be called,
+    // its argument will be the current container[i]
+    console.log(data);
   },
 
   renderMessage: function(message) {
     // TODO: Render a single message.
+    //this will append it to the $chat
+    var div = MessageView.render(message);
+    MessagesView.$chats.append(div);
   },
 
   handleClick: function(event) {
